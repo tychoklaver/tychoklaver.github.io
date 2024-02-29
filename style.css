@@ -73,16 +73,15 @@ body {
      transform: translate3d(0, -1px, 0) scale(1.03);
  }
  
- .content:first-of-type {
-     transform: scale(1.2);
+ /* .content:first-of-type {
      padding: 30px;
- }
+ } */
  
- .main {
-     flex: 1;
-     display: grid;
-     place-items: center;
- }
+ /* .main {
+     /* flex: 1; */
+     /* display: grid;
+     place-items: center; 
+ } */
  
  .skills-container {
      display: flex;
@@ -97,6 +96,12 @@ body {
      padding: 15px;
      border-radius: 25px;
      transition: background-color 0.3s ease;
+ }
+
+ .skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
  }
  
  
