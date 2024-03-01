@@ -140,8 +140,8 @@ body {
      position: fixed;
      top: 50%;
      left: 50%;
-     width: 120svh;
-     width: 120vh;
+     width: 20svh;
+     width: 20vh;
      height: 80svh;
      height: 80vh;
      transform: translate(-50%, -50%);
