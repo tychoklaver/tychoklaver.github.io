@@ -203,3 +203,15 @@ body {
  #popup.project-melvin-popup #popup-image-container {
      text-align: center;
  } 
+
+ @media screen and (max-width: 576px){
+    .skills-container h1, h4{
+      font-size: 30px;
+    }
+  }
+
+  @media screen and (max-width: 420px){
+    .skills-container h1, h4{
+      font-size: 10px;
+    }
+  }
