@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const popupImage = document.getElementById('popup-image');
     const popupText = document.getElementById('popup-text');
     const popupText2 = document.getElementById('popup-text-two')
+    const closePopupButton = document.getElementById('close-popup');
     const body = document.body;
 
     projects.forEach(project => {
@@ -26,6 +27,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 popup.classList.remove('project-melvin-popup');
                 overlay.classList.remove('active');
             }
+
+            closePopupButton.addEventListener('click', function() {
+                    popup.classList.remove('project-melvin-popup')
+                    overlay.classList.remove('active');
+                    popup.classList.remove('active');
+                    body.style.overflow = '';
+            })
 
             overlay.classList.add('active');
             popup.classList.add('active');

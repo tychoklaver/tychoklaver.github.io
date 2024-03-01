@@ -204,9 +204,28 @@ body {
      text-align: center;
  } 
 
+ #close-popup {
+    background-color: #f39c12;
+    color: #FFF;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-out;
+ }
+
+ #close-popup:hover {
+    background-color: #e67e22;
+ }
+
  @media screen and (max-width: 576px){
     .skills-container h1, h4{
       font-size: 30px;
+    }
+
+    #popup.active {
+        font-size: 10px;
     }
   }
 
@@ -216,6 +235,10 @@ body {
     }
 
     .projects-container h3, p {
+        font-size: 10px;
+    }
+
+    #popup.active {
         font-size: 10px;
     }
   }
