@@ -140,8 +140,8 @@ body {
      position: fixed;
      top: 50%;
      left: 50%;
-     width: 20svh;
-     width: 20vh;
+     width: 70svh;
+     width: 70vh;
      height: 80svh;
      height: 80vh;
      transform: translate(-50%, -50%);
@@ -228,6 +228,13 @@ body {
 
     #popup.active {
         font-size: 10px;
+    }
+
+    #popup {
+        width: 30vh;
+        width: 30svh;
+        height: 60vh;
+        height: 60svh;
     }
   }
 
