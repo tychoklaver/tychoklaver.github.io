@@ -8,7 +8,7 @@ It showcases some of my work and ways to contact me, should you wish to!
 
 ## Authors
 
-- [@ChadTycho](https://www.github.com/chadtycho)
+- [@tychoklaver](https://www.github.com/tychoklaver)
 
 
 ## Feedback
