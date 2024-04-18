@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const overlay = document.getElementById('overlay');
     const popup = document.getElementById('popup');
     const popupTitle = document.getElementById('popup-title');
-    const popupImageContainer = document.getElementById('popup-image-container');
     const popupImage = document.getElementById('popup-image');
     const popupImage2 = document.getElementById('popup-image2');
     const popupText = document.getElementById('popup-text');
