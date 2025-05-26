@@ -15,6 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const body = document.body;
 
+    closePopupButton.addEventListener('click', function () {
+        overlay.classList.remove('active');
+        popup.classList.remove('active');
+        body.style.overflow = '';
+    });
+
     projects.forEach(project => {
         project.addEventListener('click', function() {
             const projectName = project.getAttribute('data-project');
@@ -50,27 +56,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function getProjectContent(projectName) {
         switch (projectName) {
-            case 'Duplicate Dash':
+            case 'Thrill Runner':
                 return {
-                    image: 'images/DuplicateDashCover.jpg',
-                    text: 
-                    'Duplicate Dash is een game die ik samen met 5 andere studenten gemaakt heb in Unity. ' + 
-                    'In het spel kan jij als speler jezelf, zoals in de titel vermeld staat, "dupliceren". Het doel is om aan het eind van elk level zoveel mogelijk duplicaties verzameld te hebben om de boss fight te kunnen winnen.' +
-                    ' Door de levels heen staan poortjes geplaatst met nummers op. Als de speler door zo`n poortje heen loopt, krijgt hij zoveel mogelijk duplicaties er bij als op het poortje staat. Dit kan natuurlijk ook minder worden, want de speler moet zelf er achter komen welke poortjes het beste zijn om door heen te lopen!' +
-                    ' De speler kan zelf ook skins verzamelen door middel van gems. Deze gems zijn over de levels verspreid, dus de speler kan ze op elk moment verzamelen.',
-                    text2: 'Ik heb met dit project vooral gewerkt aan het dupliceren van de spelers. Ook heb ik veel bestanden ingeleverd zodat de deadlines behaald zouden zijn, en heb ik meegedacht over de concepten in het spel. Uiteindelijk is het project goed afgerond met dubbele voldoendes voor iedereen in de groep.',
-                    seperator: 'Code Screenshots',
-                    image2: 'images/DDScreenshot1.png',
-                    image3: 'images/DDScreenshot2.png'
-
+                    image: 'images/comingsoon.png',
+                    text: 'Work In Progress!',
+                    text2: '',
+                    image2: '',
+                    image3: '',
+                    seperator: '',
+                    codeText: '',
+                    codeText2: ''
                 };
             case 'Galactical Warfare':
                 return {
                     image: 'images/GalacticalCover.jpg',
                     text: 'Galactical Warfare is een game die ik heb gemaakt in het C# framework MonoGame. ' + 
                     'In het spel is het je doel als speler om als ruimteschip zo lang mogelijk vijandige schepen te ontwijken. Als je 30 seconden lang de schepen ontwijkt/neerschiet, win je het spel!' +
-                    ' Het spel is zo "user friendly" mogelijk gemaakt, door het middel van simpel te begrijpen menu`s waardoor de speler door het spel kan navigeren.' +
-                    ' Ook is het makkelijk te spelen, het enigste wat de speler hoeft in te drukken zijn de A & D knoppen om te bewegen, en de spatiebalk om te schieten.',
+                    ' Het spel is zo "user friendly" mogelijk gemaakt, door middel van eenvoudig te begrijpen menu`s waardoor de speler door het spel kan navigeren.' +
+                    ' Ook is het makkelijk te spelen, het enige wat de speler hoeft in te drukken zijn de A & D knoppen om te bewegen, en de spatiebalk om te schieten.',
                     seperator: 'Code Screenshots',
                     image2: 'images/MonoScreenshot1.png',
                     codeText: 'In dit stukje code wordt het spel live geupdate in mijn GameScene class. Ik kijk ondermeer naar speler input, loop door objecten heen om ze te updaten ' +
