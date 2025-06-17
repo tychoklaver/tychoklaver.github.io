@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const popupImage3 = document.getElementById('popup-image3');
     const popupCodeText = document.getElementById('popup-codetext');
     const popupCodeText2 = document.getElementById('popup-codetext2');
+    const popupVideo = document.getElementById('popup-video');
+    const popupVideoContainer = document.getElementById('popup-video-container');
+    const downloadLink = document.getElementById('download-link');
 
     const body = document.body;
 
@@ -45,6 +48,21 @@ document.addEventListener('DOMContentLoaded', function() {
             overlay.classList.add('active');
             popup.classList.add('active');
             body.style.overflow = 'hidden';
+
+            if (projectContent.video) {
+                document.getElementById('popup-video-source').src = projectContent.video;
+                document.getElementById('popup-video').load();
+                document.getElementById('popup-video-container').style.display = 'block';
+            } else {
+                document.getElementById('popup-video-container').style.display = 'none';
+            }
+
+            if (projectContent.download) {
+                document.getElementById('download-link').href = projectContent.download;
+                document.getElementById('popup-download').style.display = 'block';
+            } else {
+                document.getElementById('popup-download').style.display = 'none';
+            }
         });
     });
 
@@ -58,14 +76,20 @@ document.addEventListener('DOMContentLoaded', function() {
         switch (projectName) {
             case 'Thrill Runner':
                 return {
-                    image: 'images/comingsoon.png',
-                    text: 'Work In Progress!',
-                    text2: '',
-                    image2: '',
-                    image3: '',
-                    seperator: '',
-                    codeText: '',
-                    codeText2: ''
+                    image: 'images/TR_BG.png',
+                    text: 'Thrill Runner is een 3D platformer waarbij de speler zo snel mogelijk door een parkourlevel moet navigeren. ' + 
+                    'Het spel maakt gebruik van herbruikbare componenten zoals pickups met verschillende visuele effecten (roteren, zweven, knipperen), een ghost player die de vorige poging naspeelt, ' + 
+                    'en een movement-systeem met verwisselbare logica zoals lopen en dashen. De speler moet gebruik maken van zijn snelheid en reactievermogen om het doel te bereiken. ' + 
+                    'Wanneer je het level voltooit, pauzeert het spel automatisch en wordt je tijd weergegeven. De game bevat ook triggers zoals death zones, een start-/finishsysteem ' + 
+                    'en een event-gedreven pickup systeem voor feedback via VFX, geluid en UI.',
+                    seperator: 'Code & Ontwikkeling',
+                    image2: 'images/TRScreenshot1.png',
+                    image3: 'images/TRScreenshot2.png',
+                    codeText: 'De MovementController klasse gebruikt een interface-based systeem om dynamisch te wisselen tussen movement types zoals lopen en dashen. Deze componenten kunnen hergebruikt worden op andere objecten.',
+                    codeText2: 'Pickups maken gebruik van een Event Channel met events om visuele effects centraal aan te sturen.' + 
+                    ' Hierdoor kunnen pickups geluid, particles en UI tonen zonder dat elk object aparte logica nodig heeft.',
+                    video: 'videos/ThrillRunnerGameplay.mp4',
+                    download: 'https://1drv.ms/u/c/9d6fff210c833989/ESjGzfHHtl9Crhz4dbb4if0BkyxdBq0FejNj1ehG3PAVJA?e=ogeJv9'
                 };
             case 'Galactical Warfare':
                 return {
@@ -80,7 +104,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     'en kijk naar de wincriteria voor het spel.',
                     image3: 'images/MonoScreenshot2.png',
                     codeText2: 'Hier zorg ik voor de beweging van de speler. Dit doe ik door te kijken naar input, zodat de speler naar links en rechts kan bewegen. Ook zorg ik ervoor dat ' + 
-                    'de speler binnen de scherm boundaries blijft.'
+                    'de speler binnen de scherm boundaries blijft.',
+                    video: '',
+                    download: ''
                 };
             default:
                 return {
